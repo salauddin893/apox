@@ -1,0 +1,250 @@
+nav.navbar.navbar-expand-lg.center-brand.static-nav {
+    position: absolute;
+    z-index: 999;
+    width: 100%;
+}
+.navigation{
+    margin-left: auto;
+
+    @include respond(laptop) {
+        background-color: #38b4fd;
+        padding: 20px 4px;
+        margin-top: 15px;
+    }
+
+    @include respond(tab) {
+        background-color: #38b4fd;
+        padding: 20px 4px;
+        margin-top: 15px;
+    }
+
+    @include respond(phone) {
+        background: #38b4fd;
+        padding: 20px 4px;
+        margin-top: 15px;
+    }
+ 
+
+    &__toggle--icon{
+        font-size: 5rem !important;
+        width: 6rem;
+        height: 5rem;
+
+        i{
+            color: $color-white;
+        }
+        @include respond(phone) {
+            font-size: 4rem !important;
+            margin-top: 1rem;
+        }
+    }
+
+    &__item {
+        margin: 0 2rem;
+        font-size: 2rem;
+        text-transform: uppercase;
+    }
+    &__link {
+        color: $color-white;
+        position: relative;
+
+        @include respond(phone) {
+            margin-bottom: 9px;
+        }
+    
+
+        &:hover{
+            color: $color-white;
+        }
+
+        &:after {
+            position: absolute;
+            content: "";
+            width: 90%;
+            height: .3rem;
+            top: 100%;
+            left: 0;
+            background-color: $color-white;
+            margin-left: .4rem;
+            transform: scale(0);
+            transform-origin: left;
+            transition: .4s;
+        }
+        &:hover::after{
+            transform: scale(1);
+        }
+        
+    }
+    &__position{
+        @include respond(phone) {
+            position: relative;
+        }
+    }
+    &__profile{
+        font-size: 2rem;
+        color: $color-white;
+        padding: 0 20px;
+        position: relative;
+        cursor: pointer;
+
+        &--1{
+            display: none;
+            margin-left: auto;
+
+            @include respond(laptop) {
+                display: block;
+            }
+            @include respond(tab) {
+                display: block;
+                margin-left: auto;
+                z-index: 9999;
+            }
+            @include respond(phone) {
+                display: block;
+                right: 10rem;
+                top: 0;
+                z-index: 9999;
+            }
+        }
+
+        &--2{
+            display: block;
+            @include respond(laptop) {
+                display: none;
+            }
+            @include respond(tab) {
+                display: none;
+            }
+            @include respond(phone) {
+                display: none;
+            }
+        }
+
+        @include respond(phone) {
+            position: absolute;
+        }
+
+        i{
+            padding-bottom: 37px;
+            transform: translateY(16px);
+            @include respond(phone){
+                transform: translateY(25px);
+            }
+        }
+
+        &::after {
+            position: absolute;
+            content: "";
+            width: 1px;
+            height: 2rem;
+            background-color: $color-white;
+            top: 22px;
+            left: 0;
+
+            @include respond(laptop) {
+                left: 50px;
+                top: 20px;
+            }
+
+            @include respond(tab) {
+                left: 50px;
+                top: 20px;
+            }
+
+            @include respond(phone) {
+                left: 50px;
+                top: 30px;
+            }
+        }
+        &--manu{
+            position: absolute;
+            width: 17rem;
+            height: 17rem;
+            background-color: $color-white;
+            border-radius: 8px;
+            left: -113px;
+            display: none;
+
+            @include respond(laptop) {
+                left: -85px;
+                height: 20rem;
+            }
+
+            @include respond(tab) {
+                left: -85px;
+                height: 20rem;
+            }
+
+            @include respond(phone) {
+                left: -60px;
+                height: 20rem;;
+            }
+        }
+
+        &--user{
+            list-style: none;
+        }
+        &--item {
+            margin-left: 1rem;
+
+            &:not(:last-child) {
+                margin-top: 1rem;
+            }
+        }
+
+        &--link {
+            text-decoration: none;
+            color: $color-primary-dark;
+            font-size: 2rem;
+            padding: .5rem .5rem;
+            display: inline-block;
+            transition: .4s;
+
+            &:hover{
+                color: $color-primary-light;
+                text-decoration: none;
+            }
+        }
+
+        &--ticket{
+            display: inline-block;
+            text-align: center;
+            width: 70%;
+            background-color: $color-primary-dark;
+            margin: 0 auto;
+            margin-left: 15%;
+            margin-top: 2rem;
+            padding: .5rem 1rem;
+            border-radius: 15px;
+            text-transform: capitalize;
+            color: $color-white;
+            font-size: 1.7rem;
+            text-decoration: none;
+            transition: all .4s .2s;
+
+            @include respond(phone) {
+                font-size: 2rem;
+            }
+    
+            &:hover{
+                background-color: $color-primary-light;
+                color: $color-white;
+                text-decoration: none;
+            
+            }
+            
+        }
+
+        // &:hover &--ticket{
+        //     opacity: 1;
+        //     text-decoration: none;
+        // }
+        
+    }
+    
+    
+}
+
+ul li.nav-item.navigation__item:last-child a {
+    margin-bottom: 0;
+}

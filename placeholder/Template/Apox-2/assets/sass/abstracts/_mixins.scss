@@ -1,0 +1,20 @@
+@mixin clearfix {
+    &::after{
+        content: "";
+        display: table;
+        clear: both;
+    }
+}
+
+@mixin respond($breakpoint) {
+    
+    @if $breakpoint == phone {
+        @media (max-width: 576px) {@content};
+    }
+    @if $breakpoint == tab {
+        @media (max-width: 767px) {@content};
+    }
+    @if $breakpoint == laptop {
+        @media (max-width: 991px) {@content};
+    }
+}

@@ -1,0 +1,39 @@
+.book{
+    background-image: linear-gradient(105deg, 
+        rgba($color-primary-light, .9) 0%,
+        rgba($color-primary-dark, .9) 50%, 
+        $color-white 50%);
+    background-size: 100%;
+    border-radius: 3px;
+    box-shadow: 0 1.5rem 4rem rgba($color-black, .2);
+    margin-top: 25px;
+    height: 50rem;
+
+    @include respond(laptop) {
+        background-image: linear-gradient(to right, $color-primary-light, $color-primary-dark);
+        margin-top: 15px;
+    }
+    @include respond(tab) {
+        margin-top: 10px;
+    }
+    @include respond(phone) {
+        background-image: linear-gradient(to right, $color-primary-light, $color-primary-dark);
+        height: 47rem;
+        margin-top: 5px;
+    }
+
+    &__form{
+        width: 50%;
+        padding: 5rem;
+        float: left;
+
+        @include respond(laptop) {
+            width: 100%;
+        }
+
+        @include respond(phone) {
+            width: 100%;
+            padding: 3rem;
+        }
+    }
+}

@@ -1,0 +1,25 @@
+.support-btn {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    width: 4rem;
+    height: 4rem;
+    background-image: linear-gradient(to right, $color-primary-light, $color-primary-dark);
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    transition: all .5s;
+    align-items: center;
+
+    &:hover{
+        transform: scale(1.5);
+	}
+	&__icon {
+		font-size: 2rem;
+
+		&--link {
+			color: $color-white !important;
+		}
+	}
+	
+}

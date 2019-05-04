@@ -1,0 +1,37 @@
+.about{
+
+    @include respond(phone) {
+        padding: 8rem 0;
+    }
+    
+    &__img{ 
+        position: absolute;
+        overflow: hidden;
+        opacity: .07;
+        animation: round 60s infinite;
+
+        &-left{
+            left:  -274px;
+        }
+        &-right{
+            right: 0;
+            animation: none;
+            opacity: .1;
+        }
+    }
+    &__heading{
+        font-size: 4.6rem;
+        color: $color-black;
+        margin-bottom: 4rem;
+    }
+    &__pragrape{
+        font-size: 1.5rem;
+        font-weight: 300;
+        letter-spacing: .6px;
+
+        &:not(:last-child) {
+            margin-bottom: 2.5rem;
+        }
+     }
+    
+}

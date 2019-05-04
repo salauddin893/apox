@@ -1,0 +1,155 @@
+.hero {
+	position: relative;
+    width: 100%;
+    min-height: 800px;
+    background-image: linear-gradient(to right, $color-primary-dark, $color-primary-light);
+	padding-bottom: 0rem;
+
+	@include respond(laptop) {
+		min-height: 95vh;
+	}
+
+	@include respond(phone) {
+		min-height: 95vh;
+	}
+	
+	&__after{
+		position: absolute;
+		background-size: cover;
+		bottom: -21px;
+
+		@include respond(tab) {
+			bottom: -18px;
+		}
+		@include respond(phone) {
+			bottom: -10px;
+		}
+	}
+	
+	&__content {
+		width: 100%;
+		height: 100vh;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		margin-top: 2rem;
+
+		@include respond(phone) {
+			height: 95vh;
+			margin: 0;
+		}
+	}
+	&__header{
+		font-size: 3.5rem;
+		font-weight: 600;
+		color: $color-white;
+		margin-bottom: 1rem;
+
+		@include respond(tab) {
+			font-size: 2.5rem;
+			text-align: center;
+			letter-spacing: .1rem;
+		}
+
+		@include respond(phone) {
+			font-size: 2.5rem;
+			text-align: center;
+			letter-spacing: .1rem;
+		}
+	}
+	&__text{
+		color: $color-white;
+		margin-top: 1.5rem;
+		font-size: 2rem;
+		margin-bottom: 8rem;
+		letter-spacing: .1rem;
+		font-weight: 300;
+
+		@include respond(tab) {
+			font-size: 2rem;
+			margin-bottom: 3rem;
+			text-align: center;
+		}
+
+		@include respond(phone) {
+			font-size: 2rem;
+			margin-bottom: 3rem;
+			text-align: center;
+		}
+	}
+	&__form{
+		display: flex;
+		
+		@include respond(tab) {
+			justify-content: center;
+		}
+		@include respond(phone) {
+			justify-content: center;
+		}
+	}
+	&__form--group{
+
+	}
+	&__form--input{
+		padding: 1rem 2rem;
+		width: 27rem;
+		font-size: 2rem;
+		color: $color-white;
+		border: none;
+		border-top-left-radius: 5px;
+		border-bottom-left-radius: 5px;
+		opacity: 1;
+		background-color: rgba(255, 255, 255, 0.3);
+
+		&:focus{
+			outline: none;
+			border-bottom: none;
+		}
+
+		&::-webkit-input-placeholder{
+			color: $color-white;
+			
+		}
+		@include respond(phone) {
+			font-size: 2rem;
+			width: 25rem;
+		}
+	}
+	&__form--button{
+		border: none;
+		background-color: $color-white;
+		height: 5rem;
+		width: 5rem;
+		margin-left: 0rem;
+		border-top-right-radius: 5px;
+		border-bottom-right-radius: 5px;
+
+		@include respond(phone) {
+			height: 5rem;
+			width: 5rem;
+		}
+	}
+	&__form--button-icon{
+		font-size: 2.2rem;
+		color: #a733bb;
+	}
+	&__img{
+		width: 100%;
+		height: 450px;
+		display: flex;
+		justify-items: center;
+		margin-top: 15rem;
+
+		@include respond(laptop) {
+			display: none;
+		}
+
+		@include respond(phone) {
+			display: none;
+		}
+	}
+	&__img-photo{
+		width: 100%;
+		margin-left: 2rem;
+	}
+}

@@ -1,0 +1,53 @@
+.composition{
+    position: relative;
+    margin-top: 16rem;
+    height: 275px;
+
+	@include respond(tab) {
+		height: 232px;
+	}
+	
+	@include respond(phone) {
+		height: 150px;
+		display: none;
+	}
+	
+
+	&__photo{
+			width: 55%;
+			position: absolute;
+			transition: all .5s;
+			outline-offset: .7rem;
+			z-index: 10;
+
+		&--p1{
+			top: -2rem;
+			left: 0;
+		}
+		&--p2{
+			top: 10rem;
+			left: 20%;
+		}
+		&--p3{
+			top: 2rem;
+			right: 2rem;
+        }
+        &--p4{
+            left: 13rem;
+            top: -13rem;
+			z-index: 1;
+        }
+
+		&:hover{
+			transform: scale(1.1);
+			outline: .5rem solid $color-primary;
+			z-index: 20;
+			@include respond(phone) {
+				transform: scale(1.1);
+			}
+		}
+	}
+	&:hover &__photo:not(:hover){
+		transform: scale(.90);
+	}
+}

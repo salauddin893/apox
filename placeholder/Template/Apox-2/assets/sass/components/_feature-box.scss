@@ -1,0 +1,58 @@
+.feature-box{
+	background-color: $color-white;
+	font-size: 1.5rem;
+	padding: 2.5rem;
+	text-align: center;
+	border-radius: 3px;
+	box-shadow: 0 1.5rem 4rem rgba($color-black, 0.15);
+	transition: all .3s;
+	line-height: 24px;
+
+	@include respond(laptop) {
+		margin-bottom: 3rem;
+	}
+
+	@include respond(phone) { 
+		margin-bottom: 4rem;
+		font-size: 1.5rem;
+	}
+
+
+	&__icon{
+		font-size: 6rem;
+		width: 6rem;
+    	height: 6rem;
+		margin-bottom: 2rem;
+		display: inline-block;
+		background-image: linear-gradient(to right, 
+			$color-primary-light, $color-primary-dark);
+		-webkit-background-clip: text;
+		color: transparent;
+		
+	}
+	&:hover{
+		transform: translateY(-1.5rem) scale(1.03);
+	}
+	&__text{
+
+	}
+}
+
+@include respond(laptop) {
+	.section__feature .col-md-6:nth-child(3) .feature-box{
+		margin-bottom: 0;
+	}
+	.section__feature .col-md-6:nth-child(4) .feature-box{
+		margin-bottom: 0;
+	}
+}
+@include respond(tab){
+	.section__feature .col-md-6:nth-child(3) .feature-box{
+		margin-bottom: 3rem;
+	}
+}
+@include respond(phone){
+	.section__feature .col-md-6:nth-child(3) .feature-box{
+		margin-bottom: 4rem;
+	}
+}

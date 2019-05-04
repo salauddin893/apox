@@ -1,0 +1,19 @@
+.header{
+	width: 100%;
+	padding: 1.5rem;
+	position: absolute;
+	z-index: 999;
+
+	&__logo{
+		
+	}
+	&__logo-img{
+		width: 15rem;
+		margin-top: 10px;
+
+		@include respond(phone) {
+			width: 10rem;
+		}
+	}
+}
+

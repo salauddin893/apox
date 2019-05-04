@@ -1,0 +1,63 @@
+.section{
+    padding: 12rem 0;
+
+    @include respond(laptop){
+        padding: 8rem 0;
+    }
+    @include respond(tab) {
+        padding: 6rem 0;
+    }
+    @include respond(phone){
+        padding: 5rem 0;
+    }
+
+    &__about{
+        margin-top: -10px;
+        margin-bottom: -10px;
+
+        @include respond(laptop) {
+            margin-top: 0;
+            margin-bottom: 0;
+        }
+    }
+
+    &__grey{
+        background-color: $color-grey-light-1;
+    }
+    &__feature{
+        background-image: linear-gradient(to right, 
+		rgba($color-primary-light, 0.8), 
+		rgba($color-primary-dark, 0.8));
+    background-size: cover;
+    }
+
+    &__testimonial{
+        background-image: linear-gradient(to right, $color-primary-dark, $color-primary-light);
+        position: relative;
+
+        .owl-carousel .owl-item img {
+            display: block;
+            width: 72%;
+            margin: 2rem auto;
+            border-radius: 50%;
+            border: 4px solid #ddd;
+        }
+    }
+    &__book{
+        background-image: linear-gradient(to right bottom, 
+			$color-primary-dark, $color-primary-light);
+        position: relative;
+        margin-top: -50px;
+
+        @include respond(laptop){
+            margin-top: -35px;
+        }
+        
+        &--img{
+            position: absolute;
+			top: -10px;
+			left: 0;
+			right: 0;
+        }
+    }
+}

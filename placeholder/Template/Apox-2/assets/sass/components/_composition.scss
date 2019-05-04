@@ -1,0 +1,33 @@
+.composition{
+	height: 50rem;
+	margin-top: -32px;
+
+	@include respond(laptop) {
+		height: 64rem;
+		margin-top: 2rem;
+	}
+	@include respond(tab) {
+		height: 48rem;
+	}
+	
+	@include respond(phone) {
+		display: none;
+	}
+	
+
+	&__photo{
+			width: 100%;
+
+			@include respond(phone) {
+				width: 40%;
+			}
+		
+		
+       
+	}
+	.owl-carousel .owl-item img {
+		display: block;
+		width: 100% !important;
+		margin: 2rem auto;
+	}
+}

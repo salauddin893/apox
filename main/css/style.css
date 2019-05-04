@@ -1,0 +1,522 @@
+/*
+ * Title:  ETa
+ * Author: Theme-asia
+ */
+
+/* --------------------------------------------------------
+[Table of contents]
+1. Global styles
+2. Menu styles
+3.Demos
+4.Feature
+5.Responsive
+
+
+[End table of contents]
+----------------------------------------------------------------------- */
+
+/* ------------------------------
+   Global styles
+---------------------------- */
+
+html, body, div, span, applet, object, iframe,
+
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+
+a, abbr, acronym, address, big, cite, code,
+
+del, dfn, em, img, ins, kbd, q, s, samp,
+
+small, strike, strong, sub, sup, tt, var,
+
+b, u, i, center,
+
+dl, dt, dd, ol, ul, li,
+
+fieldset, form, label, legend,
+
+table, caption, tbody, tfoot, thead, tr, th, td,
+
+article, aside, canvas, details, embed,
+
+figure, figcaption, footer, header, hgroup,
+
+menu, nav, output, ruby, section, summary,
+
+time, mark, audio, video {
+
+  margin: 0;
+
+  padding: 0;
+
+  border: 0;
+
+  font-size: 100%;
+
+  font: inherit;
+
+  vertical-align: baseline; }
+
+
+
+article, aside, details, figcaption, figure,
+
+footer, header, hgroup, menu, nav, section {
+
+  display: block; }
+
+
+
+body {
+
+  line-height: 1; }
+
+
+
+ol, ul {
+
+  list-style: none; }
+
+
+
+blockquote, q {
+
+  quotes: none; }
+
+
+
+blockquote:before, blockquote:after,
+
+q:before, q:after {
+
+  content: '';
+
+  content: none; }
+
+
+
+table {
+
+  border-collapse: collapse;
+
+  border-spacing: 0; }
+
+
+
+body {
+
+   font-family: 'Rubik', sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+
+  line-height: 26px;
+
+  letter-spacing: 0; }
+
+
+
+img {
+
+  max-width: 100%; }
+
+
+
+a,
+
+a:hover,
+
+a:focus {
+
+  cursor: pointer !important;
+
+  outline: none;
+
+  text-decoration: none; }
+
+
+
+h1,
+
+h2,
+
+h3,
+
+h4,
+
+h5,
+
+h6 {
+
+ font-family: 'Rubik', sans-serif;
+  font-weight: 400;
+  
+  color: #1e2c34;
+
+  margin: 0;
+
+  padding: 0; }
+
+
+
+ul, li {
+
+  margin: 0;
+
+  padding: 0;
+
+  list-style: none; }
+
+
+
+strong {
+
+  font-weight: 700; }
+
+
+
+/* This only works with JavaScript, 
+        if it's not present, don't show loader */
+
+.no-js #loader {
+    display: none;
+}
+
+.js #loader {
+    display: block;
+    position: absolute;
+    left: 100px;
+    top: 0;
+}
+canvas.particles-js-canvas-el {
+  position: absolute;
+  top: 0;
+}
+
+.se-pre-con {
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: 9999999;
+    background: url(../img/loader_ico.gif) center no-repeat #fff;
+}
+
+
+/* -------------------------------- 
+
+Start Banner style
+
+-------------------------------- */
+.top_hero {
+    width: 100%;
+    background-image: linear-gradient(to right, #4a2ace, #38b5fd);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100vh;
+    position: relative;
+    z-index: 9;
+}
+.top_hero .container{
+	height: 100%;
+}
+
+.banner-txt img{
+	margin-bottom: 10px;
+}
+.banner-txt p {
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 30px;
+    color: #d2d3d6;
+    margin-bottom: 35px;
+    margin-top: 23px;
+}
+.banner-txt h2 {
+    font-family: 'Rubik', sans-serif;
+    font-size: 40px;
+    font-weight: 600;
+    color: #ffffff;
+    margin: 0;
+    margin-top: 25px;
+    margin-bottom: 10px;
+    line-height: 1.2;
+}
+.banner-txt .btn{
+  color: #ffffff;
+  background-color: #20e67c;
+  padding: 12px 36px;
+  text-transform: uppercase;
+  margin-right: 10px;
+  font-weight: 600;
+  border-radius: 30px !important;
+  position: relative;
+  z-index: 2;
+  overflow: hidden;
+  border-color: #20e67c;
+}
+.banner-txt .btn:hover{
+	color: #20e67c;
+}
+.banner-txt .btn:after{
+	content: '';
+	width: 0;
+	height: 100%;
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	background-color: #ffffff;
+	-webkit-transition: 0.3s all ease;
+	transition: 0.3s all ease;
+	z-index: -2;
+}
+.banner-txt .btn:hover:after{
+	width: 100%;
+}
+
+/* -------------------------------- 
+
+Close Banner style
+
+-------------------------------- */
+
+
+
+/* -------------------------------- 
+
+Start demos style
+
+-------------------------------- */
+.version_divider{
+	width: 100%;
+	padding-top: 80px;
+}
+.every_demos{
+  width: 100%;
+  padding-top: 45px;
+}
+.every_demos h2{
+  font-weight: 500;
+  color: #43464b;
+  font-size: 36px;
+  line-height: 1.3em;
+  text-transform: uppercase;
+  padding: 20px 0;
+  text-align: center;
+  width: 100%;
+}
+
+.demos_item {
+    margin-bottom: 60px;
+    -webkit-transition: all 300ms linear 0s;
+    -o-transition: all 300ms linear 0s;
+    transition: all 300ms linear 0s;
+}
+.demos_item .demo_img {
+    -webkit-transition: all 300ms linear 0s;
+    -o-transition: all 300ms linear 0s;
+    transition: all 300ms linear 0s;
+    display: block;
+    border-radius: 7px;
+    overflow: hidden;
+    height: 300px;
+}
+h3.text-center.preview-title {
+    background: #ffffff;
+    padding: 12px 0px;
+    box-shadow: 0 0 10px #ddd;
+    font-weight: 500;
+    color: #454450;
+    text-transform: uppercase;
+}
+.img-fluid {
+    max-width: 100%;
+    height: auto;
+}
+.demos_item h4 {
+    font-size: 22px;
+    color: #242424;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 600;
+    padding-top: 25px;
+    -webkit-transition: all 300ms linear 0s;
+    -o-transition: all 300ms linear 0s;
+    transition: all 300ms linear 0s;
+    text-align: center;
+}
+.demos_item:hover .demo_img {
+    -webkit-box-shadow: 0px 0px 35px 0px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 0px 35px 0px rgba(0, 0, 0, 0.2);
+    margin-top: -10px;
+}
+
+.row .pd-20{
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+
+.inner-title-sec{
+  width: 100%;
+  background-color: #f16334;
+  padding-top: 80px;
+}
+.inner-title-sec .title{
+  width: 100%;
+  text-align: center;
+  padding-bottom: 60px;
+}
+.inner-title-sec .title h3{
+  color: #ffffff;
+  text-transform: uppercase;
+  line-height: 1.2em;
+  font-weight: 500;
+  font-size: 36px;
+  padding-bottom: 20px;
+}
+.inner-title-sec .title p{
+  font-weight: 400;
+  color: #ffffff;
+  font-size: 18px;
+}
+.promo-img img{
+  width: 100%;
+  float: left;
+}
+
+/* -------------------------------- 
+
+Close demos style
+
+-------------------------------- */
+
+
+footer{
+  width: 100%;
+  background-color: #2e3444;
+  text-align: center;
+  padding: 60px 0;
+  float: left;
+}
+footer p,
+footer p a{
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 400;
+}
+footer p a{
+  text-decoration: underline;
+}
+
+/* -------------------------------- 
+
+Close applu style
+
+-------------------------------- */
+
+
+
+
+/* -------------------------------- 
+
+Start Responsive style
+
+-------------------------------- */
+
+
+@media only screen and (max-width : 400px) {
+.col-4{
+  -webkit-box-flex: 0;
+-ms-flex: 0 0 50%;
+flex: 0 0 50%;
+max-width: 50%;
+}
+}
+@media only screen and (max-width : 767px) {
+  .navbar-toggler{
+    border:1px solid #ffffff;
+  }
+  .navbar-toggler i{
+    color: #ffffff;
+  }
+  .navbar .navbar-collapse{
+    background-color: #03b4bb ;
+    padding: 10px 0;
+    text-align: center;
+  }
+
+  .appza_buy .col_inside{
+    height: auto;
+  }
+
+  .every_demos h2{
+    font-size: 24px;
+  }
+  .demos_item h4{
+    font-size: 18px;
+  }
+  
+  .btn_buy a{
+    margin-bottom: 30px;
+    padding: 12px 24px;
+    float: left;
+  }
+  .btn_buy{
+    padding-bottom: 40px;
+  }
+  .applu_feature{
+    float: left;
+  }
+
+  .banner_inside h1{
+    font-size: 28px;
+  }
+
+  .demos_item .demo_img{
+    text-align: center;
+  }
+
+  .top_hero{
+  	height: 100%;
+  	padding: 200px 0;
+  }
+
+ 
+}
+
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
+  .navbar-toggler{
+    border:1px solid #ffffff;
+  }
+  .navbar-toggler i{
+    color: #ffffff;
+  }
+  .navbar .navbar-collapse{
+    background-color: #03b4bb ;
+    padding: 10px 0;
+    text-align: center;
+  }
+
+  .appza_buy .col_inside{
+    height: auto;
+  }
+  .demos_item h4{
+    font-size: 18px;
+  }
+
+  .banner_inside h1{
+    font-size: 30px;
+  }
+
+
+}
+
+
+/* -------------------------------- 
+
+Close Responsive style
+
+-------------------------------- */
+
+
